@@ -1,0 +1,21 @@
+{
+  "name": "js-starter-code",
+  "version": "1.0.0",
+  "description": "JS Starter Code",
+  "main": "script.js",
+  "scripts": {
+    
+    "start": "lite-server",
+    "dev": "concurrently \"npm run watch\" \"npm run serve\"",
+    "cypress": "cypress open",
+    "cy:run": "cypress run",
+    "test": "start-server-and-test start http://localhost:3002 cy:run"
+    
+  },
+  "author": "Pluralsight",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^9.1.1",
+    "lite-server": "^2.5.4"
+  }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body>
+    First name: <input type="text" id="fname" onfocus="myFunction(this.id)"><br>  
+    Last name: <input type="text" id="lname" onfocus="myFunction(this.id)">   
+<p>Select a color from the list.</p>
+<select id="mySelect" onchange="main()">
+     <option value="Red">Red
+     <option value="Green">Green
+     <option value="Blue">Blue
+</select>
+<p id="demo"></p>
+
+Select some of the text: <input type= "text" value = "Hello World!" onselect="select()">
+
+<form action="form.asp" onsubmit="submitForm()">
+    Enter name: <input type="text" name="fname">
+    <input type="submit" value="Submit">
+</form>
+<input type="text" onkeydown= "main()"> <br>
+
+<input type="text" id="demo1" onkeydown="keydownFunc()" onkeyup="keyupFunc()">
+<script>
+    function myFunction(x) {
+         document.getElementById(x).style.background = "yellow";
+    }
+    function main() {
+            var x = document.getElementById("mySelect").value;
+            document.getElementById("demo").innerHTML = "You selected: " + x;
+            alert("You pressed a key inside the input field");
+        }
+    function select(){
+        alert("Text has been selected");
+
+    }
+
+    function submitForm() {
+              alert("The form was submitted");
+          }
+          function keydownFunc() {
+         document.getElementById("demo1").style.backgroundColor = "red";
+    }
+
+    function keyupFunc() {
+        document.getElementById("demo1").style.backgroundColor = "green";
+    }
+
+</script>
+</body>
+</html>
